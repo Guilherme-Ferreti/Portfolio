@@ -1,1 +1,14 @@
 @import 'tailwindcss';
+@import './_reset.css';
+
+@theme {
+  --color-*: initial;
+  --color-primary: #ffb400;
+  --color-gray-500: #f0f0f6;
+  --color-gray-600: #e5e5e5;
+  --color-gray-800: #767676;
+  --color-white: #fff;
+  --color-dark: #2b2b2b;
+
+  --font-primary: 'Inter', sans-serif;
+}
