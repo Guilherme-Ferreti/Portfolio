@@ -1,10 +1,21 @@
 <script setup lang="ts">
 import { IconHomeFilled } from '@tabler/icons-vue';
 import NavLink from './NavLink.vue';
+import { useLayoutStore } from '@/stores/layout';
+import { useTemplateRef, watch } from 'vue';
 
-defineEmits<{
-  'toggle-sidebar': [];
-}>();
+const layoutStore = useLayoutStore();
+
+const openSidebarButtonRef = useTemplateRef('open-sidebar-button');
+
+watch(
+  () => layoutStore.sidebarIsOpen,
+  (newValue) => {
+    if (openSidebarButtonRef.value && !newValue) {
+      setTimeout(() => openSidebarButtonRef.value!.focus());
+    }
+  },
+);
 </script>
 
 <template>
@@ -12,9 +23,12 @@ defineEmits<{
     class="flex items-center bg-gray-100 h-4.5 p-[var(--spacing-screen-padding)] lg:min-h-screen lg:items-start"
   >
     <button
-      class="lg:hidden mr-1"
+      class="lg:hidden mr-1 cursor-pointer"
       type="button"
-      @click="$emit('toggle-sidebar')"
+      aria-label="Open sidebar"
+      @click="layoutStore.sidebarIsOpen = true"
+      :aria-expanded="layoutStore.sidebarIsOpen"
+      ref="open-sidebar-button"
     >
       Menu
     </button>
