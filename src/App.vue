@@ -15,7 +15,7 @@ const isOpen = ref(false);
       @toggle-sidebar="isOpen = !isOpen"
     />
     <TheSidebar
-      class="lg:col-start-[sidebar-start] lg:col-end-[sidebar-end] lg:row-start-1 lg:sticky lg:top-0"
+      class="lg:col-start-[sidebar-start] lg:col-end-[sidebar-end] lg:row-start-1"
       :is-open="isOpen"
       @close="isOpen = false"
     />
