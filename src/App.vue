@@ -10,10 +10,11 @@ const isOpen = ref(false);
   <div
     class="grid gap-y-[var(--spacing-screen-padding)] lg:grid-cols-[[sidebar-start]_auto_[sidebar-end]_1fr_[navbar-start]_auto_[navbar-end]] lg:items-start"
   >
-    <TheNavbar
+    <header
       class="lg:col-start-[navbar-start] lg:col-end-[navbar-end] lg:row-start-1 lg:sticky lg:top-0"
-      @toggle-sidebar="isOpen = !isOpen"
-    />
+    >
+      <TheNavbar @toggle-sidebar="isOpen = !isOpen" />
+    </header>
     <TheSidebar
       class="lg:col-start-[sidebar-start] lg:col-end-[sidebar-end] lg:row-start-1"
       :is-open="isOpen"
