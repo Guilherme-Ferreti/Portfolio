@@ -6,17 +6,6 @@ import { useTemplateRef, watch } from 'vue';
 
 const layoutStore = useLayoutStore();
 
-const closeSidebarButtonRef = useTemplateRef('close-sidebar-button');
-
-watch(
-  () => layoutStore.sidebarIsOpen,
-  (newValue) => {
-    if (closeSidebarButtonRef.value && newValue) {
-      setTimeout(() => closeSidebarButtonRef.value!.focus());
-    }
-  },
-);
-
 const profile = {
   socialIcons: [
     {
@@ -75,99 +64,104 @@ const profile = {
 </script>
 
 <template>
-  <aside
-    class="flex flex-col items-center gap-0.75 bg-white w-[min(100vw,_20rem)] scrollbar-thin p-[var(--spacing-screen-padding)] h-screen fixed z-10 top-0 -left-20 transition-[left] duration-300 ease-in-out lg:sticky lg:left-0 overflow-y-auto"
-    aria-label="Guilherme Ferreti's profile information"
-    :class="{ 'left-0': layoutStore.sidebarIsOpen }"
-    :inert="!layoutStore.sidebarIsOpen"
+  <focus-trap
+    v-model:active="layoutStore.sidebarIsOpen"
+    :initial-focus="() => $refs.closeSidebarButton"
   >
-    <button
-      class="self-end w-fit lg:hidden text-dark cursor-pointer"
-      aria-label="Close sidebar"
-      @click="layoutStore.sidebarIsOpen = false"
-      ref="close-sidebar-button"
+    <aside
+      class="flex flex-col items-center gap-0.75 bg-white w-[min(100vw,_20rem)] scrollbar-thin p-[var(--spacing-screen-padding)] h-screen fixed z-10 top-0 -left-20 transition-[left] duration-300 ease-in-out lg:sticky lg:left-0 overflow-y-auto"
+      aria-label="Guilherme Ferreti's profile information"
+      :class="{ 'left-0': layoutStore.sidebarIsOpen }"
+      :inert="!layoutStore.sidebarIsOpen"
     >
-      <IconX />
-    </button>
-    <img
-      class="rounded-full size-8 object-cover object-center mb-0.75"
-      src="@/assets/images/profile-picture.png"
-      alt="Guilherme's profile picture"
-    />
-    <span class="text-dark text-xl text-trim text-center">Guilherme Ferreti</span>
-    <span class="text-trim text-center">Fullstack Developer</span>
-    <ul class="flex gap-0.5">
-      <li v-for="icon in profile.socialIcons">
-        <a
-          class="grid place-items-center size-2 rounded-full bg-primary text-dark hover:text-white"
-          target="_blank"
-          rel="external"
-          :href="icon.link"
-          :aria-label="icon.ariaLabel"
+      <button
+        class="self-end w-fit lg:hidden text-dark cursor-pointer"
+        aria-label="Close sidebar"
+        @click="layoutStore.sidebarIsOpen = false"
+        ref="close-sidebar-button"
+      >
+        <IconX />
+      </button>
+      <img
+        class="rounded-full size-8 object-cover object-center mb-0.75"
+        src="@/assets/images/profile-picture.png"
+        alt="Guilherme's profile picture"
+      />
+      <span class="text-dark text-xl text-trim text-center">Guilherme Ferreti</span>
+      <span class="text-trim text-center">Fullstack Developer</span>
+      <ul class="flex gap-0.5">
+        <li v-for="icon in profile.socialIcons">
+          <a
+            class="grid place-items-center size-2 rounded-full bg-primary text-dark hover:text-white"
+            target="_blank"
+            rel="external"
+            :href="icon.link"
+            :aria-label="icon.ariaLabel"
+          >
+            <component
+              :is="icon.icon"
+              width="20"
+              height="20"
+            />
+          </a>
+        </li>
+      </ul>
+      <hr class="divider" />
+      <div
+        v-for="info in profile.generalInfo"
+        class="flex justify-between w-full text-dark"
+      >
+        <span class="mr-auto bg-primary px-0.25">{{ info.label }}:</span>
+        <span>{{ info.value }}</span>
+      </div>
+      <hr class="divider" />
+      <span class="sidebar__section-title">Languages</span>
+      <ul
+        class="w-full"
+        role="list"
+      >
+        <li
+          v-for="language in profile.languages"
+          class="mb-0.5"
         >
-          <component
-            :is="icon.icon"
-            width="20"
-            height="20"
-          />
-        </a>
-      </li>
-    </ul>
-    <hr class="divider" />
-    <div
-      v-for="info in profile.generalInfo"
-      class="flex justify-between w-full text-dark"
-    >
-      <span class="mr-auto bg-primary px-0.25">{{ info.label }}:</span>
-      <span>{{ info.value }}</span>
-    </div>
-    <hr class="divider" />
-    <span class="sidebar__section-title">Languages</span>
-    <ul
-      class="w-full"
-      role="list"
-    >
-      <li
-        v-for="language in profile.languages"
-        class="mb-0.5"
+          <div class="flex justify-between mb-0.25">
+            <span>{{ language.label }}</span>
+            <span>{{ language.value }}</span>
+          </div>
+          <ProgressBar :percentage="language.percentage" />
+        </li>
+      </ul>
+      <hr class="divider" />
+      <span class="sidebar__section-title">Skills</span>
+      <ul
+        class="w-full"
+        role="list"
       >
-        <div class="flex justify-between mb-0.25">
-          <span>{{ language.label }}</span>
-          <span>{{ language.value }}</span>
-        </div>
-        <ProgressBar :percentage="language.percentage" />
-      </li>
-    </ul>
-    <hr class="divider" />
-    <span class="sidebar__section-title">Skills</span>
-    <ul
-      class="w-full"
-      role="list"
-    >
-      <li
-        v-for="skill in profile.skills"
-        class="mb-0.5"
+        <li
+          v-for="skill in profile.skills"
+          class="mb-0.5"
+        >
+          <div class="flex justify-between mb-0.25">
+            <span>{{ skill.label }}</span>
+            <span>{{ skill.value }}%</span>
+          </div>
+          <ProgressBar :percentage="skill.value" />
+        </li>
+      </ul>
+      <hr class="divider" />
+      <span class="sidebar__section-title">Extra Skills</span>
+      <ul
+        class="w-full list-inside"
+        role="list"
+        style="list-style-image: url('/icons/squares.svg')"
       >
-        <div class="flex justify-between mb-0.25">
-          <span>{{ skill.label }}</span>
-          <span>{{ skill.value }}%</span>
-        </div>
-        <ProgressBar :percentage="skill.value" />
-      </li>
-    </ul>
-    <hr class="divider" />
-    <span class="sidebar__section-title">Extra Skills</span>
-    <ul
-      class="w-full list-inside"
-      role="list"
-      style="list-style-image: url('/icons/squares.svg')"
-    >
-      <li v-for="skill in profile.extraSkills">
-        <span class="ml-[1ch]">{{ skill }}</span>
-      </li>
-    </ul>
-    <hr class="divider" />
-  </aside>
+        <li v-for="skill in profile.extraSkills">
+          <span class="ml-[1ch]">{{ skill }}</span>
+        </li>
+      </ul>
+      <hr class="divider" />
+    </aside>
+  </focus-trap>
 </template>
 
 <style scoped>

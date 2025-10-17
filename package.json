@@ -17,6 +17,8 @@
   "dependencies": {
     "@tabler/icons-vue": "^3.35.0",
     "@tailwindcss/vite": "^4.1.14",
+    "focus-trap": "^7.6.5",
+    "focus-trap-vue": "^4.1.0",
     "pinia": "^3.0.3",
     "tailwindcss": "^4.1.14",
     "vue": "^3.5.22",
