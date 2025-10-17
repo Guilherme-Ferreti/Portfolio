@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './_root.css';
 @import './_reset.css';
 
 @theme {

@@ -8,7 +8,9 @@ defineEmits<{
 </script>
 
 <template>
-  <nav class="flex items-center bg-gray-100 h-4.5 p-1.5 lg:min-h-screen lg:items-start">
+  <nav
+    class="flex items-center bg-gray-100 h-4.5 p-[var(--spacing-screen-padding)] lg:min-h-screen lg:items-start"
+  >
     <button
       class="lg:hidden mr-1"
       type="button"

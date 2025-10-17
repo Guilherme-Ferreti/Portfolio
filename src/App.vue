@@ -8,7 +8,7 @@ const isOpen = ref(false);
 
 <template>
   <div
-    class="grid gap-1.5 lg:grid-cols-[[sidebar-start]_auto_[sidebar-end]_1fr_[navbar-start]_auto_[navbar-end]] lg:items-start"
+    class="grid gap-y-[var(--spacing-screen-padding)] lg:grid-cols-[[sidebar-start]_auto_[sidebar-end]_1fr_[navbar-start]_auto_[navbar-end]] lg:items-start"
   >
     <TheNavbar
       class="lg:col-start-[navbar-start] lg:col-end-[navbar-end] lg:row-start-1 lg:sticky lg:top-0"
@@ -19,6 +19,8 @@ const isOpen = ref(false);
       :is-open="isOpen"
       @close="isOpen = false"
     />
-    <RouterView />
+    <main>
+      <RouterView />
+    </main>
   </div>
 </template>
