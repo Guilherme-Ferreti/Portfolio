@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { IconHomeFilled } from '@tabler/icons-vue';
-import NavLink from './NavLink.vue';
 import { useLayoutStore } from '@/stores/layout';
+import { IconHomeFilled } from '@tabler/icons-vue';
 import { useTemplateRef, watch } from 'vue';
+import NavLink from './NavLink.vue';
 
 const layoutStore = useLayoutStore();
 

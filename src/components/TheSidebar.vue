@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { IconBrandGithubFilled, IconBrandLinkedinFilled, IconX } from '@tabler/icons-vue';
-import ProgressBar from './ProgressBar.vue';
 import { useLayoutStore } from '@/stores/layout';
-import { nextTick, useTemplateRef, watch } from 'vue';
-import { useFocusTrap } from '@vueuse/integrations/useFocusTrap';
+import { IconBrandGithubFilled, IconBrandLinkedinFilled, IconX } from '@tabler/icons-vue';
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
+import { useFocusTrap } from '@vueuse/integrations/useFocusTrap';
+import { nextTick, useTemplateRef, watch } from 'vue';
+import ProgressBar from './ProgressBar.vue';
 
 const layoutStore = useLayoutStore();
 
