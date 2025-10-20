@@ -6,7 +6,7 @@ import { useTemplateRef, watch } from 'vue';
 
 const layoutStore = useLayoutStore();
 
-const openSidebarButtonRef = useTemplateRef('open-sidebar-button');
+const openSidebarButtonRef = useTemplateRef<HTMLButtonElement>('open-sidebar-button');
 
 watch(
   () => layoutStore.sidebarIsOpen,
