@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @import './_root.css';
 @import './_reset.css';
+@import './_utils.css';
 
 @theme {
   --spacing: 1rem;

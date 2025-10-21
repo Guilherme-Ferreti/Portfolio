@@ -182,10 +182,9 @@ const profile = {
       <AppLink
         class="w-full"
         to="https://drive.google.com/file/d/11t6hKuRFdOq5-qiHS1FpsTkwfwkpD4Ru/view?usp=drive_link"
-      >
-        <span class="text-trim">DOWNLOAD CV</span>
-        <IconExternalLink />
-      </AppLink>
+        text="DOWNLOAD CV"
+        :icon="IconExternalLink"
+      />
     </div>
   </aside>
 </template>

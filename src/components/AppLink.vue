@@ -1,19 +1,29 @@
 <template>
   <a
     v-if="isExternal"
-    class="app-link"
+    class="app-link btn-border-reveal"
     :href="to.toString()"
     target="_blank"
     rel="external"
   >
-    <slot />
+    <span v-if="text">{{ text }}</span>
+    <component
+      v-if="icon"
+      class="size-[1.25rem]"
+      :is="icon"
+    />
   </a>
   <RouterLink
     v-else
-    class="app-link"
+    class="app-link btn-border-reveal"
     :to="to"
   >
-    <slot />
+    <span v-if="text">{{ text }}</span>
+    <component
+      v-if="icon"
+      class="size-[1.25rem]"
+      :is="icon"
+    />
   </RouterLink>
 </template>
 
@@ -23,6 +33,8 @@ import type { RouteLocationRaw } from 'vue-router';
 
 const props = defineProps<{
   to: RouteLocationRaw;
+  text?: string;
+  icon?: unknown;
 }>();
 
 const isExternal = computed(() => typeof props.to === 'string' && props.to.startsWith('http'));
@@ -32,15 +44,6 @@ const isExternal = computed(() => typeof props.to === 'string' && props.to.start
 @reference '@/assets/css/app.css';
 
 .app-link {
-  @apply relative z-10 flex flex-wrap items-center justify-center gap-1 overflow-hidden bg-primary p-0.5 text-sm font-bold text-dark transition-colors duration-400 ease-in-out hover:text-white focus-visible:text-white;
-}
-
-.app-link ::before {
-  @apply absolute top-0 left-0 -z-10 size-full -translate-x-full bg-primary brightness-90 transition-transform duration-400 ease-in-out content-[''];
-}
-
-.app-link:hover ::before,
-.app-link:focus-visible ::before {
-  @apply translate-x-0;
+  @apply flex flex-wrap items-center justify-center gap-1 bg-primary p-0.5 text-sm font-bold text-dark hover:text-white focus-visible:text-white;
 }
 </style>
