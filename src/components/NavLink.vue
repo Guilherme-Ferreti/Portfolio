@@ -1,19 +1,17 @@
 <template>
   <li>
-    <RouterLink
-      class="grid place-items-center size-2.5 rounded-full bg-gray-500 [&.router-link-active]:bg-primary [&.router-link-active]:text-dark"
+    <AppLink
+      class="size-2.5 rounded-full"
       :to="to"
-    >
-      <component
-        class="size-[1.25rem]"
-        :is="icon"
-      />
-    </RouterLink>
+      :icon="icon"
+      color="secondary"
+    />
   </li>
 </template>
 
 <script setup lang="ts">
 import type { RouteLocationRaw } from 'vue-router';
+import AppLink from './AppLink.vue';
 
 defineProps<{
   icon: unknown;

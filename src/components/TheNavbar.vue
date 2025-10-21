@@ -34,11 +34,7 @@ watch(
     </button>
     <ul class="flex gap-1 lg:flex-col">
       <NavLink
-        to="#"
-        :icon="IconHomeFilled"
-      />
-      <NavLink
-        to="#"
+        :to="{ name: 'home' }"
         :icon="IconHomeFilled"
       />
     </ul>

@@ -109,19 +109,12 @@ const profile = {
     <span class="text-trim text-center">Fullstack Developer</span>
     <ul class="flex gap-0.5">
       <li v-for="icon in profile.socialIcons">
-        <a
-          class="grid place-items-center size-2 rounded-full bg-primary text-dark hover:text-white"
-          target="_blank"
-          rel="external"
-          :href="icon.link"
+        <AppLink
+          class="rounded-full"
+          :to="icon.link"
           :aria-label="icon.ariaLabel"
-        >
-          <component
-            :is="icon.icon"
-            width="20"
-            height="20"
-          />
-        </a>
+          :icon="icon.icon"
+        />
       </li>
     </ul>
     <hr class="divider" />
@@ -180,7 +173,6 @@ const profile = {
     <hr class="divider" />
     <div class="w-full">
       <AppLink
-        class="w-full"
         to="https://drive.google.com/file/d/11t6hKuRFdOq5-qiHS1FpsTkwfwkpD4Ru/view?usp=drive_link"
         text="DOWNLOAD CV"
         :icon="IconExternalLink"
