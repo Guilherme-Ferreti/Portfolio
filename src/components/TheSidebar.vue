@@ -80,7 +80,7 @@ const profile = {
       value: 80,
     },
   ],
-  extraSkills: ['PHP', 'JavaScript', 'Unit Testing', 'Restful APIs', 'SASS', 'Git Knowledge'],
+  extraSkills: ['PHP', 'JavaScript', 'Unit Testing', 'Static Analysis', 'Restful APIs', 'SASS', 'Git Knowledge'],
 };
 </script>
 
