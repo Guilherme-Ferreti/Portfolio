@@ -1,9 +1,15 @@
 <script setup lang="ts">
 import { useLayoutStore } from '@/stores/layout';
-import { IconBrandGithubFilled, IconBrandLinkedinFilled, IconX } from '@tabler/icons-vue';
+import {
+  IconBrandGithubFilled,
+  IconBrandLinkedinFilled,
+  IconExternalLink,
+  IconX,
+} from '@tabler/icons-vue';
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
 import { useFocusTrap } from '@vueuse/integrations/useFocusTrap';
 import { nextTick, useTemplateRef, watch } from 'vue';
+import AppLink from './AppLink.vue';
 import ProgressBar from './ProgressBar.vue';
 
 const layoutStore = useLayoutStore();
@@ -172,6 +178,15 @@ const profile = {
       </li>
     </ul>
     <hr class="divider" />
+    <div class="w-full">
+      <AppLink
+        class="w-full"
+        to="https://drive.google.com/file/d/11t6hKuRFdOq5-qiHS1FpsTkwfwkpD4Ru/view?usp=drive_link"
+      >
+        <span class="text-trim">DOWNLOAD CV</span>
+        <IconExternalLink />
+      </AppLink>
+    </div>
   </aside>
 </template>
 
