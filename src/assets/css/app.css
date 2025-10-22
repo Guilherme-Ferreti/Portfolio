@@ -31,4 +31,8 @@
   .divider {
     @apply my-0.5 w-full rounded-2xl text-gray-600;
   }
+
+  .card {
+    @apply bg-white p-2;
+  }
 }

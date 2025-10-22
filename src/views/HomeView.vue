@@ -1,5 +1,5 @@
 <template>
-  <div class="px-[var(--spacing-screen-padding)]">
+  <div class="px-[var(--spacing-screen-padding)] space-y-2">
     <section
       class="bg-white p-2 lg:p-4 @container"
       aria-labelledby="hero__heading"
@@ -18,5 +18,80 @@
         </p>
       </div>
     </section>
+    <section aria-labelledby="skils-section__heading">
+      <h2
+        class="section__title"
+        id="skills-section__heading"
+      >
+        My Skills
+      </h2>
+      <ul class="flex flex-wrap gap-1 items-center justify-center">
+        <li
+          v-for="skill in skills"
+          class="card grid place-items-center hover:scale-105 transition-transform duration-300 w-16 h-7.5"
+        >
+          <component :is="skill.logo" />
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
+
+<script lang="ts" setup>
+import DockerLogo from '@/assets/images/logos/docker.svg';
+import FilamentPHPLogo from '@/assets/images/logos/filamentphp.svg';
+import LaravelLogo from '@/assets/images/logos/laravel.svg';
+import LivewireLogo from '@/assets/images/logos/livewire.svg';
+import PHPStanLogo from '@/assets/images/logos/phpstan.svg';
+import PHPUnitLogo from '@/assets/images/logos/phpunit.svg';
+import SQLLogo from '@/assets/images/logos/sql.svg';
+import TailwindLogo from '@/assets/images/logos/tailwindcss.svg';
+import VueLogo from '@/assets/images/logos/vuejs.svg';
+
+const skills = [
+  {
+    logo: LaravelLogo,
+    name: 'Laravel',
+  },
+  {
+    logo: VueLogo,
+    name: 'Vue.js',
+  },
+  {
+    logo: TailwindLogo,
+    name: 'TailwindCSS',
+  },
+  {
+    logo: LivewireLogo,
+    name: 'Livewire',
+  },
+  {
+    logo: PHPStanLogo,
+    name: 'PHPStan',
+  },
+  {
+    logo: PHPUnitLogo,
+    name: 'PHPUnit',
+  },
+  {
+    logo: DockerLogo,
+    name: 'Docker',
+  },
+  {
+    logo: FilamentPHPLogo,
+    name: 'FilamentPHP',
+  },
+  {
+    logo: SQLLogo,
+    name: 'SQL',
+  },
+];
+</script>
+
+<style scoped>
+@reference '@/assets/css/app.css';
+
+.section__title {
+  @apply mb-1 text-center text-3xl font-bold text-dark;
+}
+</style>
