@@ -10,7 +10,11 @@
     <main>
       <RouterView />
     </main>
-    <TheSidebar class="lg:col-start-[sidebar-start] lg:col-end-[sidebar-end] lg:row-start-1" />
+    <div
+      class="lg:col-start-[sidebar-start] lg:col-end-[sidebar-end] lg:row-start-1 lg:sticky lg:top-0"
+    >
+      <TheSidebar class="" />
+    </div>
   </div>
 </template>
 
