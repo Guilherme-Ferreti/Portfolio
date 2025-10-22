@@ -134,7 +134,13 @@ const breakpoints = useBreakpoints(breakpointsTailwind);
 watch(
   () => layoutStore.sidebarIsOpen,
   (isOpen) => {
-    isOpen ? nextTick(activate) : deactivate();
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      nextTick(activate);
+    } else {
+      document.body.style.overflow = 'auto';
+      deactivate();
+    }
   },
 );
 
