@@ -18,7 +18,10 @@
         </p>
       </div>
     </section>
-    <section aria-labelledby="skils-section__heading">
+    <section
+      aria-labelledby="skils-section__heading"
+      id="skills"
+    >
       <h2
         class="section__title"
         id="skills-section__heading"

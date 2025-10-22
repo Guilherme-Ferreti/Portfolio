@@ -7,7 +7,7 @@
     >
       <TheNavbar />
     </header>
-    <main>
+    <main id="main-content">
       <RouterView />
     </main>
     <div
