@@ -198,12 +198,15 @@ const profile = {
     },
   ],
   extraSkills: [
-    'JavaScript',
-    'Unit Testing',
-    'Static Analysis',
     'Restful APIs',
-    'SASS',
+    'Unit Testing, Static Analysis',
     'Git Knowledge',
+    'SCRUM',
+    'SASS, BEM',
+    'MySQL, MongoDB',
+    'Docker',
+    'FilamentPHP',
+    'Vite, Pinia, VueRouter',
   ],
 };
 </script>

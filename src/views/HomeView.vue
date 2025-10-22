@@ -30,7 +30,10 @@
           v-for="skill in skills"
           class="card grid place-items-center hover:scale-105 transition-transform duration-300 w-16 h-7.5"
         >
-          <component :is="skill.logo" />
+          <component
+            :is="skill.logo"
+            :aria-label="skill.name"
+          />
         </li>
       </ul>
     </section>
