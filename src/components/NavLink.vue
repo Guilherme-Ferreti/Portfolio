@@ -1,20 +1,50 @@
 <template>
   <li>
-    <AppLink
-      class="size-2.5 rounded-full"
+    <RouterLink
       :to="to"
-      :icon="icon"
-      color="secondary"
-    />
+      custom
+      v-slot="{ href, navigate }"
+    >
+      <a
+        v-bind="$attrs"
+        :href="href"
+        @click="navigate"
+        :class="{
+          'nav-link btn-border-reveal': true,
+          'nav-link--active': $route.fullPath === href,
+          'nav-link--inactive': $route.fullPath !== href,
+        }"
+      >
+        <component
+          class="size-[1.25rem]"
+          :is="icon"
+        />
+      </a>
+    </RouterLink>
   </li>
 </template>
 
 <script setup lang="ts">
-import type { RouteLocationRaw } from 'vue-router';
-import AppLink from './AppLink.vue';
+import { type RouteLocationRaw } from 'vue-router';
 
 defineProps<{
   icon: unknown;
   to: RouteLocationRaw;
 }>();
 </script>
+
+<style scoped>
+@reference '@/assets/css/app.css';
+
+.nav-link {
+  @apply flex items-center justify-center rounded-full p-0.5 text-sm font-bold;
+}
+
+.nav-link--active {
+  @apply bg-primary text-white;
+}
+
+.nav-link--inactive {
+  @apply bg-gray-600 text-dark;
+}
+</style>
