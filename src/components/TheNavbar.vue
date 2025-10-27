@@ -34,8 +34,13 @@ watch(
       @click="layoutStore.sidebarIsOpen = true"
       :aria-expanded="layoutStore.sidebarIsOpen"
       ref="open-sidebar-button"
+      v-tooltip.left="'Guilherme\'s profile'"
     >
-      Menu
+      <img
+        class="rounded-full size-[2.25rem] object-cover object-center"
+        src="@/assets/images/profile-picture.png"
+        alt="Guilherme's profile picture"
+      />
     </button>
     <ul class="flex gap-1 lg:flex-col">
       <NavLink
