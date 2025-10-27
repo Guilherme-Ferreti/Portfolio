@@ -28,17 +28,8 @@
       >
         My Skills
       </h2>
-      <ul class="flex flex-wrap gap-1 items-center justify-center">
-        <li
-          v-for="skill in skills"
-          class="card grid place-items-center hover:scale-105 transition-transform duration-300 w-16 h-7.5"
-        >
-          <component
-            :is="skill.logo"
-            :aria-label="skill.name"
-          />
-        </li>
-      </ul>
+
+      <SkillsCarousel />
     </section>
     <section
       aria-labelledby="work-history-section__heading"
@@ -69,56 +60,9 @@
 </template>
 
 <script lang="ts" setup>
-import DockerLogo from '@/assets/images/logos/docker.svg';
-import FilamentPHPLogo from '@/assets/images/logos/filamentphp.svg';
-import LaravelLogo from '@/assets/images/logos/laravel.svg';
-import LivewireLogo from '@/assets/images/logos/livewire.svg';
-import PHPStanLogo from '@/assets/images/logos/phpstan.svg';
-import PHPUnitLogo from '@/assets/images/logos/phpunit.svg';
-import SQLLogo from '@/assets/images/logos/sql.svg';
-import TailwindLogo from '@/assets/images/logos/tailwindcss.svg';
-import VueLogo from '@/assets/images/logos/vuejs.svg';
 import EducationHistory from '@/components/EducationHistory.vue';
+import SkillsCarousel from '@/components/SkillsCarousel.vue';
 import WorkHistory from '@/components/WorkHistory.vue';
-
-const skills = [
-  {
-    logo: LaravelLogo,
-    name: 'Laravel',
-  },
-  {
-    logo: VueLogo,
-    name: 'Vue.js',
-  },
-  {
-    logo: TailwindLogo,
-    name: 'TailwindCSS',
-  },
-  {
-    logo: LivewireLogo,
-    name: 'Livewire',
-  },
-  {
-    logo: PHPStanLogo,
-    name: 'PHPStan',
-  },
-  {
-    logo: PHPUnitLogo,
-    name: 'PHPUnit',
-  },
-  {
-    logo: DockerLogo,
-    name: 'Docker',
-  },
-  {
-    logo: FilamentPHPLogo,
-    name: 'FilamentPHP',
-  },
-  {
-    logo: SQLLogo,
-    name: 'SQL',
-  },
-];
 </script>
 
 <style scoped>

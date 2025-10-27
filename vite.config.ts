@@ -11,7 +11,18 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
 
   return defineConfig({
-    plugins: [vue(), vueDevTools(), tailwindcss(), svgLoader()],
+    plugins: [
+      vue({
+        template: {
+          compilerOptions: {
+            isCustomElement: (tag) => ['swiper-container', 'swiper-slide'].includes(tag),
+          },
+        },
+      }),
+      vueDevTools(),
+      tailwindcss(),
+      svgLoader(),
+    ],
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
