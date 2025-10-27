@@ -29,7 +29,7 @@
 
 @layer components {
   .divider {
-    @apply my-0.5 w-full rounded-2xl text-gray-600;
+    @apply w-full rounded-2xl text-gray-600;
   }
 
   .card {

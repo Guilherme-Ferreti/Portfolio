@@ -217,4 +217,8 @@ const profile = {
 .sidebar__section-title {
   @apply self-start text-lg text-dark;
 }
+
+.divider {
+  @apply my-0.5;
+}
 </style>
