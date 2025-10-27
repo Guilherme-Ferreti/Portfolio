@@ -11,10 +11,22 @@
             </span>
           </div>
         </div>
-        <div
-          v-html="entry.description"
-          class="career-history__description"
-        ></div>
+        <div>
+          <p>{{ entry.description }}</p>
+          <AppDetails
+            summary="Main responsabilities"
+            class="mt-1.25"
+          >
+            <ul class="list-inside list-disc space-y-0.5">
+              <li
+                v-for="responsability in entry.responsabilities"
+                class="list-outside ml-1"
+              >
+                {{ responsability }}
+              </li>
+            </ul>
+          </AppDetails>
+        </div>
       </div>
       <hr
         class="divider"
@@ -25,31 +37,22 @@
 </template>
 
 <script lang="ts">
-interface CarrerHistoryEntry {
+interface CareerHistoryEntry {
   title: string;
   company: string;
   startDate: string;
   endDate: string;
   description: string;
+  responsabilities: string[];
 }
 
 interface Props {
-  history: CarrerHistoryEntry[];
+  history: CareerHistoryEntry[];
 }
 </script>
 
 <script setup lang="ts">
+import AppDetails from './AppDetails.vue';
+
 defineProps<Props>();
 </script>
-
-<style scoped>
-@reference '@/assets/css/app.css';
-
-.career-history__description :deep(p) {
-  @apply mb-0.75;
-}
-
-.career-history__description :deep(ul) {
-  @apply list-inside list-disc space-y-0.5;
-}
-</style>
