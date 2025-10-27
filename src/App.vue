@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid gap-y-[var(--spacing-screen-padding)] lg:grid-cols-[[sidebar-start]_auto_[sidebar-end]_1fr_[navbar-start]_auto_[navbar-end]] lg:items-start"
+    class="grid gap-y-[var(--spacing-screen-padding)] lg:grid-cols-[[sidebar-start]_auto_[sidebar-end]_1fr_[navbar-start]_auto_[navbar-end]] lg:items-start max-w-[var(--screen-max-width)] mx-auto"
   >
     <header
       class="lg:col-start-[navbar-start] lg:col-end-[navbar-end] lg:row-start-1 lg:sticky lg:top-0"
