@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useLayoutStore } from '@/stores/layout';
-import { IconCode, IconHomeFilled } from '@tabler/icons-vue';
+import { IconBriefcaseFilled, IconCode, IconHomeFilled } from '@tabler/icons-vue';
 import { useTemplateRef, watch } from 'vue';
 import NavLink from './NavLink.vue';
 
@@ -40,6 +40,10 @@ watch(
       <NavLink
         :to="{ name: 'home', hash: '#skills' }"
         :icon="IconCode"
+      />
+      <NavLink
+        :to="{ name: 'home', hash: '#work-history' }"
+        :icon="IconBriefcaseFilled"
       />
     </ul>
   </nav>
