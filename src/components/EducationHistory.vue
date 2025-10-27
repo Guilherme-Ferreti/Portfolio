@@ -1,9 +1,9 @@
 <template>
   <div class="@container card">
-    <div class="gap-1.75 grid @lg:grid-cols-[1fr_1fr]">
+    <div class="gap-1.5 grid @lg:grid-cols-[1fr_1fr]">
       <div
         v-for="entry in educationHistory"
-        class="p-1 border border-gray-600 rounded-lg hover:bg-gray-100 flex flex-col justify-between gap-1"
+        class="p-1 border border-gray-600 rounded-lg hover:bg-gray-100 flex flex-col justify-between gap-0.75"
       >
         <h3 class="text-dark text-lg font-bold">{{ entry.title }}</h3>
         <div class="flex gap-0.75 flex-wrap items-center mt-auto">
