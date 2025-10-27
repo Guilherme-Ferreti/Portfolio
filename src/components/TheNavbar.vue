@@ -41,18 +41,26 @@ watch(
       <NavLink
         :to="{ name: 'home' }"
         :icon="IconHomeFilled"
+        v-tooltip.left="'Home'"
+        aria-label="Home"
       />
       <NavLink
         :to="{ name: 'home', hash: '#skills' }"
         :icon="IconCodeCircle2Filled"
+        v-tooltip.left="'Skills'"
+        aria-label="Skills"
       />
       <NavLink
         :to="{ name: 'home', hash: '#work-history' }"
         :icon="IconBriefcaseFilled"
+        v-tooltip.left="'Work History'"
+        aria-label="Work History"
       />
       <NavLink
         :to="{ name: 'home', hash: '#education-history' }"
         :icon="IconBookFilled"
+        v-tooltip.left="'Education History'"
+        aria-label="Education History"
       />
     </ul>
   </nav>
