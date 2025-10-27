@@ -1,5 +1,5 @@
 <template>
-  <div class="select-none w-full bg-white">
+  <div class="select-none w-full bg-white pointer-events-none">
     <swiper-container
       class="grid items-center | skills-carousel"
       :init="false"
