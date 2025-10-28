@@ -1,4 +1,5 @@
 <template>
+  <TheSkipToContentLink />
   <div
     class="grid max-w-[var(--screen-max-width)] mx-auto lg:grid-cols-[[sidebar-start]_auto_[sidebar-end]_1fr_[navbar-start]_auto_[navbar-end]] lg:items-start"
   >
@@ -28,4 +29,5 @@
 import TheFooter from './components/TheFooter.vue';
 import TheNavbar from './components/TheNavbar.vue';
 import TheSidebar from './components/TheSidebar.vue';
+import TheSkipToContentLink from './components/TheSkipToContentLink.vue';
 </script>
