@@ -11,8 +11,8 @@
         @click="navigate"
         :class="{
           'nav-link btn-border-reveal': true,
-          'nav-link--active': $route.fullPath === href,
-          'nav-link--inactive': $route.fullPath !== href,
+          'nav-link--active': isActive,
+          'nav-link--inactive': !isActive,
         }"
       >
         <component
@@ -30,6 +30,7 @@ import { type RouteLocationRaw } from 'vue-router';
 defineProps<{
   icon: unknown;
   to: RouteLocationRaw;
+  isActive: boolean;
 }>();
 </script>
 

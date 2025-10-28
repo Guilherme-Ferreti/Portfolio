@@ -1,3 +1,55 @@
+<template>
+  <nav
+    class="flex items-center bg-gray-100 h-4.5 p-[var(--spacing-screen-padding)] lg:min-h-screen lg:items-start"
+  >
+    <button
+      class="lg:hidden mr-1 cursor-pointer"
+      type="button"
+      aria-label="Open sidebar"
+      @click="layoutStore.sidebarIsOpen = true"
+      :aria-expanded="layoutStore.sidebarIsOpen"
+      ref="open-sidebar-button"
+      v-tooltip.left="'Guilherme\'s profile'"
+    >
+      <img
+        class="rounded-full size-[2.25rem] object-cover object-center"
+        src="@/assets/images/profile-picture.png"
+        alt="Guilherme's profile picture"
+      />
+    </button>
+    <ul class="flex gap-1 lg:flex-col">
+      <NavLink
+        :to="{ name: 'home' }"
+        :icon="IconHomeFilled"
+        :isActive="layoutStore.currentlyVisibleSectionsIds.includes('hero')"
+        v-tooltip.left="'Home'"
+        aria-label="Home"
+      />
+      <NavLink
+        :to="{ name: 'home', hash: '#skills' }"
+        :icon="IconCodeCircle2Filled"
+        :isActive="layoutStore.currentlyVisibleSectionsIds.includes('skills')"
+        v-tooltip.left="'Skills'"
+        aria-label="Skills"
+      />
+      <NavLink
+        :to="{ name: 'home', hash: '#work-history' }"
+        :icon="IconBriefcaseFilled"
+        :isActive="layoutStore.currentlyVisibleSectionsIds.includes('work-history')"
+        v-tooltip.left="'Work History'"
+        aria-label="Work History"
+      />
+      <NavLink
+        :to="{ name: 'home', hash: '#education-history' }"
+        :icon="IconBookFilled"
+        :isActive="layoutStore.currentlyVisibleSectionsIds.includes('education-history')"
+        v-tooltip.left="'Education History'"
+        aria-label="Education History"
+      />
+    </ul>
+  </nav>
+</template>
+
 <script setup lang="ts">
 import { useLayoutStore } from '@/stores/layout';
 import {
@@ -22,51 +74,3 @@ watch(
   },
 );
 </script>
-
-<template>
-  <nav
-    class="flex items-center bg-gray-100 h-4.5 p-[var(--spacing-screen-padding)] lg:min-h-screen lg:items-start"
-  >
-    <button
-      class="lg:hidden mr-1 cursor-pointer"
-      type="button"
-      aria-label="Open sidebar"
-      @click="layoutStore.sidebarIsOpen = true"
-      :aria-expanded="layoutStore.sidebarIsOpen"
-      ref="open-sidebar-button"
-      v-tooltip.left="'Guilherme\'s profile'"
-    >
-      <img
-        class="rounded-full size-[2.25rem] object-cover object-center"
-        src="@/assets/images/profile-picture.png"
-        alt="Guilherme's profile picture"
-      />
-    </button>
-    <ul class="flex gap-1 lg:flex-col">
-      <NavLink
-        :to="{ name: 'home' }"
-        :icon="IconHomeFilled"
-        v-tooltip.left="'Home'"
-        aria-label="Home"
-      />
-      <NavLink
-        :to="{ name: 'home', hash: '#skills' }"
-        :icon="IconCodeCircle2Filled"
-        v-tooltip.left="'Skills'"
-        aria-label="Skills"
-      />
-      <NavLink
-        :to="{ name: 'home', hash: '#work-history' }"
-        :icon="IconBriefcaseFilled"
-        v-tooltip.left="'Work History'"
-        aria-label="Work History"
-      />
-      <NavLink
-        :to="{ name: 'home', hash: '#education-history' }"
-        :icon="IconBookFilled"
-        v-tooltip.left="'Education History'"
-        aria-label="Education History"
-      />
-    </ul>
-  </nav>
-</template>

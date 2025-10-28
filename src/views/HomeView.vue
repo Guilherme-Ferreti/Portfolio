@@ -1,6 +1,7 @@
 <template>
   <div class="px-[var(--spacing-screen-padding)] space-y-3">
-    <section
+    <AppSection
+      id="hero"
       class="bg-white p-2 lg:p-4 @container"
       aria-labelledby="hero__heading"
     >
@@ -17,8 +18,8 @@
           Laravel and Vue.js for building dynamic, scalable, and high-performance applications.
         </p>
       </div>
-    </section>
-    <section
+    </AppSection>
+    <AppSection
       aria-labelledby="skils-section__heading"
       id="skills"
     >
@@ -30,8 +31,8 @@
       </h2>
 
       <SkillsCarousel />
-    </section>
-    <section
+    </AppSection>
+    <AppSection
       aria-labelledby="work-history-section__heading"
       id="work-history"
     >
@@ -43,8 +44,8 @@
       </h2>
 
       <WorkHistory />
-    </section>
-    <section
+    </AppSection>
+    <AppSection
       aria-labelledby="education-history-section__heading"
       id="education-history"
     >
@@ -55,11 +56,12 @@
         Education
       </h2>
       <EducationHistory />
-    </section>
+    </AppSection>
   </div>
 </template>
 
 <script lang="ts" setup>
+import AppSection from '@/components/AppSection.vue';
 import EducationHistory from '@/components/EducationHistory.vue';
 import SkillsCarousel from '@/components/SkillsCarousel.vue';
 import WorkHistory from '@/components/WorkHistory.vue';
