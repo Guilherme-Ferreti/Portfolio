@@ -15,12 +15,13 @@
 </template>
 
 <script setup lang="ts">
+import type { AppSectionId } from '@/enums/AppSectionId';
 import { useLayoutStore } from '@/stores/layout';
 import { useElementVisibility } from '@vueuse/core';
 import { useTemplateRef, watch } from 'vue';
 
 const props = defineProps<{
-  id: string;
+  id: AppSectionId;
   title?: string;
 }>();
 

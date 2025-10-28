@@ -1,7 +1,7 @@
 <template>
   <div class="px-[var(--spacing-screen-padding)] space-y-3">
     <AppSection
-      id="hero"
+      :id="AppSectionId.HERO"
       class="bg-white p-2 lg:p-4 @container"
       aria-labelledby="hero__heading"
     >
@@ -20,19 +20,19 @@
       </div>
     </AppSection>
     <AppSection
-      id="skills"
+      :id="AppSectionId.SKILLS"
       title="My Skills"
     >
       <SkillsCarousel />
     </AppSection>
     <AppSection
-      id="work-history"
+      :id="AppSectionId.WORK_HISTORY"
       title="Work History"
     >
       <WorkHistory />
     </AppSection>
     <AppSection
-      id="education-history"
+      :id="AppSectionId.EDUCATION_HISTORY"
       title="Education"
     >
       <EducationHistory />
@@ -45,4 +45,5 @@ import AppSection from '@/components/AppSection.vue';
 import EducationHistory from '@/components/EducationHistory.vue';
 import SkillsCarousel from '@/components/SkillsCarousel.vue';
 import WorkHistory from '@/components/WorkHistory.vue';
+import { AppSectionId } from '@/enums/AppSectionId';
 </script>

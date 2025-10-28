@@ -21,28 +21,28 @@
       <NavLink
         :to="{ name: 'home' }"
         :icon="IconHomeFilled"
-        :isActive="layoutStore.currentlyVisibleSectionsIds.includes('hero')"
+        :isActive="layoutStore.currentlyVisibleSectionsIds.includes(AppSectionId.HERO)"
         v-tooltip.left="'Home'"
         aria-label="Home"
       />
       <NavLink
         :to="{ name: 'home', hash: '#skills' }"
         :icon="IconCodeCircle2Filled"
-        :isActive="layoutStore.currentlyVisibleSectionsIds.includes('skills')"
+        :isActive="layoutStore.currentlyVisibleSectionsIds.includes(AppSectionId.SKILLS)"
         v-tooltip.left="'Skills'"
         aria-label="Skills"
       />
       <NavLink
         :to="{ name: 'home', hash: '#work-history' }"
         :icon="IconBriefcaseFilled"
-        :isActive="layoutStore.currentlyVisibleSectionsIds.includes('work-history')"
+        :isActive="layoutStore.currentlyVisibleSectionsIds.includes(AppSectionId.WORK_HISTORY)"
         v-tooltip.left="'Work History'"
         aria-label="Work History"
       />
       <NavLink
         :to="{ name: 'home', hash: '#education-history' }"
         :icon="IconBookFilled"
-        :isActive="layoutStore.currentlyVisibleSectionsIds.includes('education-history')"
+        :isActive="layoutStore.currentlyVisibleSectionsIds.includes(AppSectionId.EDUCATION_HISTORY)"
         v-tooltip.left="'Education History'"
         aria-label="Education History"
       />
@@ -51,6 +51,7 @@
 </template>
 
 <script setup lang="ts">
+import { AppSectionId } from '@/enums/AppSectionId';
 import { useLayoutStore } from '@/stores/layout';
 import {
   IconBookFilled,
