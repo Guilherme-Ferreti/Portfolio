@@ -3,5 +3,5 @@ html {
 }
 
 body {
-  @apply min-h-screen bg-gray-600 font-primary text-gray-800;
+  @apply min-h-screen bg-gray-500 font-primary text-gray-800;
 }
