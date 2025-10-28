@@ -1,8 +1,15 @@
 <template>
   <section
-    :id="id"
     ref="section"
+    :id="id"
+    :aria-labelledby="title ? headingId : undefined"
   >
+    <h2
+      v-if="title"
+      :id="headingId"
+    >
+      {{ title }}
+    </h2>
     <slot />
   </section>
 </template>
@@ -14,7 +21,10 @@ import { useTemplateRef, watch } from 'vue';
 
 const props = defineProps<{
   id: string;
+  title?: string;
 }>();
+
+const headingId = `${props.id}__heading`;
 
 const layoutStore = useLayoutStore();
 
@@ -31,3 +41,11 @@ watch(
   },
 );
 </script>
+
+<style scoped>
+@reference '@/assets/css/app.css';
+
+h2 {
+  @apply mb-1 text-center text-3xl font-bold text-dark;
+}
+</style>

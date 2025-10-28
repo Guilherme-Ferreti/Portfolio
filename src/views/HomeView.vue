@@ -20,41 +20,21 @@
       </div>
     </AppSection>
     <AppSection
-      aria-labelledby="skils-section__heading"
       id="skills"
+      title="My Skills"
     >
-      <h2
-        class="section__title"
-        id="skills-section__heading"
-      >
-        My Skills
-      </h2>
-
       <SkillsCarousel />
     </AppSection>
     <AppSection
-      aria-labelledby="work-history-section__heading"
       id="work-history"
+      title="Work History"
     >
-      <h2
-        class="section__title"
-        id="work-history-section__heading"
-      >
-        Work History
-      </h2>
-
       <WorkHistory />
     </AppSection>
     <AppSection
-      aria-labelledby="education-history-section__heading"
       id="education-history"
+      title="Education"
     >
-      <h2
-        class="section__title"
-        id="education-history-section__heading"
-      >
-        Education
-      </h2>
       <EducationHistory />
     </AppSection>
   </div>
@@ -66,11 +46,3 @@ import EducationHistory from '@/components/EducationHistory.vue';
 import SkillsCarousel from '@/components/SkillsCarousel.vue';
 import WorkHistory from '@/components/WorkHistory.vue';
 </script>
-
-<style scoped>
-@reference '@/assets/css/app.css';
-
-.section__title {
-  @apply mb-1 text-center text-3xl font-bold text-dark;
-}
-</style>
