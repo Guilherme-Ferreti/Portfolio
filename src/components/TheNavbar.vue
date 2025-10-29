@@ -33,6 +33,13 @@
         aria-label="Skills"
       />
       <NavLink
+        :to="{ name: 'home', hash: `#${AppSectionId.PROJECTS}` }"
+        :icon="IconDeviceDesktopFilled"
+        :isActive="layoutStore.currentlyVisibleSectionsIds.includes(AppSectionId.PROJECTS)"
+        v-tooltip.left="'Projects'"
+        aria-label="Projects"
+      />
+      <NavLink
         :to="{ name: 'home', hash: `#${AppSectionId.WORK_HISTORY}` }"
         :icon="IconBriefcaseFilled"
         :isActive="layoutStore.currentlyVisibleSectionsIds.includes(AppSectionId.WORK_HISTORY)"
@@ -57,6 +64,7 @@ import {
   IconBookFilled,
   IconBriefcaseFilled,
   IconCodeCircle2Filled,
+  IconDeviceDesktopFilled,
   IconHomeFilled,
 } from '@tabler/icons-vue';
 import { useTemplateRef, watch } from 'vue';

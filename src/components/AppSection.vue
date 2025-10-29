@@ -7,9 +7,16 @@
     <h2
       v-if="title"
       :id="headingId"
+      class="mb-1 text-center text-3xl font-bold text-dark"
     >
       {{ title }}
     </h2>
+    <p
+      v-if="description"
+      class="mb-1 mx-auto"
+    >
+      {{ description }}
+    </p>
     <slot />
   </section>
 </template>
@@ -23,6 +30,7 @@ import { useTemplateRef, watch } from 'vue';
 const props = defineProps<{
   id: AppSectionId;
   title?: string;
+  description?: string;
 }>();
 
 const headingId = `${props.id}__heading`;
@@ -45,8 +53,4 @@ watch(
 
 <style scoped>
 @reference '@/assets/css/app.css';
-
-h2 {
-  @apply mb-1 text-center text-3xl font-bold text-dark;
-}
 </style>
