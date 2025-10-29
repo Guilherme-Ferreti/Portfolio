@@ -13,7 +13,7 @@
           <component
             :is="skill.logo"
             :aria-label="skill.name"
-            class="max-w-10"
+            class="max-w-10 max-h-3"
           />
         </div>
       </swiper-slide>
@@ -28,6 +28,7 @@ import LaravelLogo from '@/assets/images/logos/laravel.svg';
 import LivewireLogo from '@/assets/images/logos/livewire.svg';
 import PHPStanLogo from '@/assets/images/logos/phpstan.svg';
 import PHPUnitLogo from '@/assets/images/logos/phpunit.svg';
+import SASSLogo from '@/assets/images/logos/sass.svg';
 import SQLLogo from '@/assets/images/logos/sql.svg';
 import TailwindLogo from '@/assets/images/logos/tailwindcss.svg';
 import VueLogo from '@/assets/images/logos/vuejs.svg';
@@ -79,6 +80,10 @@ const skills = [
   {
     logo: TailwindLogo,
     name: 'TailwindCSS',
+  },
+  {
+    logo: SASSLogo,
+    name: 'SASS',
   },
   {
     logo: LivewireLogo,
