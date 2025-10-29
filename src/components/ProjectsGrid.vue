@@ -3,7 +3,7 @@
     <li
       v-for="(project, index) in projects"
       :class="{
-        'bg-white flex flex-col @2xl:[&>*]:flex-1 border border-gray-600 rounded-lg hover:bg-gray-100': true,
+        'bg-white flex flex-col border border-gray-600 rounded-lg hover:bg-gray-100 shadow-md @2xl:[&>*]:flex-1': true,
         '@2xl:flex-row': index % 2 === 0,
         '@2xl:flex-row-reverse': index % 2 === 1,
       }"
