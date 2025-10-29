@@ -26,21 +26,21 @@
         aria-label="Home"
       />
       <NavLink
-        :to="{ name: 'home', hash: '#skills' }"
+        :to="{ name: 'home', hash: `#${AppSectionId.SKILLS}` }"
         :icon="IconCodeCircle2Filled"
         :isActive="layoutStore.currentlyVisibleSectionsIds.includes(AppSectionId.SKILLS)"
         v-tooltip.left="'Skills'"
         aria-label="Skills"
       />
       <NavLink
-        :to="{ name: 'home', hash: '#work-history' }"
+        :to="{ name: 'home', hash: `#${AppSectionId.WORK_HISTORY}` }"
         :icon="IconBriefcaseFilled"
         :isActive="layoutStore.currentlyVisibleSectionsIds.includes(AppSectionId.WORK_HISTORY)"
         v-tooltip.left="'Work History'"
         aria-label="Work History"
       />
       <NavLink
-        :to="{ name: 'home', hash: '#education-history' }"
+        :to="{ name: 'home', hash: `#${AppSectionId.EDUCATION_HISTORY}` }"
         :icon="IconBookFilled"
         :isActive="layoutStore.currentlyVisibleSectionsIds.includes(AppSectionId.EDUCATION_HISTORY)"
         v-tooltip.left="'Education History'"
