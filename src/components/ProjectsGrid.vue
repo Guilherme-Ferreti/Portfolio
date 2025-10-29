@@ -4,10 +4,19 @@
       v-for="(project, index) in projects"
       :class="{
         'bg-white flex flex-col border border-gray-600 rounded-lg hover:bg-gray-100 shadow-md @2xl:[&>*]:flex-1': true,
-        '@2xl:flex-row': index % 2 === 0,
-        '@2xl:flex-row-reverse': index % 2 === 1,
+        '@2xl:flex-row-reverse': index % 2 === 0,
+        '@2xl:flex-row': index % 2 === 1,
       }"
     >
+      <div class="overflow-hidden">
+        <img
+          :src="project.image"
+          :alt="`${project.name} homepage screenshot`"
+          class="h-full object-cover bg-no-repeat hover:scale-105 transition-transform duration-300 ease-in-out"
+          role="presentation"
+          loading="lazy"
+        />
+      </div>
       <div class="p-1.5 gap-1.25 flex flex-col">
         <h3 class="text-dark text-xl font-bold text-center">{{ project.name }}</h3>
         <p>{{ project.description }}</p>
@@ -35,15 +44,6 @@
             :aria-label="`See ${project.name} live view`"
           />
         </div>
-      </div>
-      <div class="overflow-hidden">
-        <img
-          :src="project.image"
-          :alt="`${project.name} homepage screenshot`"
-          class="h-full object-cover bg-no-repeat hover:scale-105 transition-transform duration-300 ease-in-out"
-          role="presentation"
-          loading="lazy"
-        />
       </div>
     </li>
   </ul>
