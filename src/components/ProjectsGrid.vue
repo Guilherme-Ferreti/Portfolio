@@ -55,8 +55,10 @@ import FilamentPHPIcon from '@/assets/images/icons/filamentphp.svg';
 import HTMLIcon from '@/assets/images/icons/html.svg';
 import JavascriptIcon from '@/assets/images/icons/javascript.svg';
 import LaravelIcon from '@/assets/images/icons/laravel.svg';
+import NuxtIcon from '@/assets/images/icons/nuxt.svg';
 import PHPStanIcon from '@/assets/images/icons/phpstan.svg';
 import SASSIcon from '@/assets/images/icons/sass.svg';
+import TailwindIcon from '@/assets/images/icons/tailwind.svg';
 import VueIcon from '@/assets/images/icons/vue.svg';
 import { IconBrandGithubFilled, IconExternalLink } from '@tabler/icons-vue';
 import AppLink from './AppLink.vue';
@@ -79,6 +81,15 @@ const projects = [
     technologies: [LaravelIcon, PHPStanIcon],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Aleague-API',
     url: null,
+  },
+  {
+    name: 'Trello Board',
+    description:
+      'A simple and easy-to-use Trello board. Create and manage tasks, assign them to different columns, and track their progress.',
+    image: new URL('@/assets/images/projects/trello-board.webp', import.meta.url).href,
+    technologies: [NuxtIcon, TailwindIcon],
+    githubUrl: 'https://github.com/Guilherme-Ferreti/Trello-Board',
+    url: 'https://guilherme-ferreti.github.io/Trello-Board/',
   },
   {
     name: 'Recipes App',
