@@ -79,7 +79,7 @@
       <ul
         class="w-full list-inside"
         role="list"
-        style="list-style-image: url('/icons/squares.svg')"
+        :style="`list-style-image: url('${squareIconUrl}');`"
       >
         <li v-for="skill in profile.extraSkills">
           <span class="ml-[1ch]">{{ skill }}</span>
@@ -209,6 +209,8 @@ const profile = {
     'Vite, Pinia, VueRouter',
   ],
 };
+
+const squareIconUrl = import.meta.env.VITE_BASE_URL + 'icons/squares.svg';
 </script>
 
 <style scoped>
