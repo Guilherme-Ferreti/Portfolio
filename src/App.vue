@@ -1,10 +1,10 @@
 <template>
   <TheSkipToContentLink />
   <div
-    class="grid max-w-[var(--screen-max-width)] mx-auto lg:grid-cols-[[sidebar-start]_auto_[sidebar-end]_1fr_[navbar-start]_auto_[navbar-end]] lg:items-start"
+    class="grid max-w-(--screen-max-width) mx-auto lg:grid-cols-[[sidebar-start]_auto_[sidebar-end]_1fr_[navbar-start]_auto_[navbar-end]] lg:items-start"
   >
     <header
-      class="mb-[var(--spacing-screen-padding)] lg:col-start-[navbar-start] lg:col-end-[navbar-end] lg:row-start-1 lg:sticky lg:top-0 lg:mb-0"
+      class="mb-(--spacing-screen-padding) lg:col-start-[navbar-start] lg:col-end-[navbar-end] lg:row-start-1 lg:sticky lg:top-0 lg:mb-0"
     >
       <TheNavbar />
     </header>
@@ -16,7 +16,7 @@
     <div>
       <main
         id="main-content"
-        class="mb-[var(--spacing-screen-padding)]"
+        class="mb-(--spacing-screen-padding)"
       >
         <RouterView />
       </main>
