@@ -4,7 +4,7 @@
       class="cursor-pointer text-dark p-1 list-none flex justify-between items-center -outline-offset-3"
     >
       <span>{{ summary }}</span>
-      <IconChevronDown class="group-[&[open]]:rotate-180 transition-transform duration-300" />
+      <IconChevronDown class="group-[[open]]:rotate-180 transition-transform duration-300" />
     </summary>
     <div class="p-1 border-t border-gray-600">
       <slot />

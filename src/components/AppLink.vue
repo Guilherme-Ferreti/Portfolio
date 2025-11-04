@@ -10,7 +10,7 @@
     <span v-if="text">{{ text }}</span>
     <component
       v-if="icon"
-      class="size-[1.25rem]"
+      class="size-1.25"
       :is="icon"
     />
   </a>
@@ -22,7 +22,7 @@
     <span v-if="text">{{ text }}</span>
     <component
       v-if="icon"
-      class="size-[1.25rem]"
+      class="size-1.25"
       :is="icon"
     />
   </RouterLink>

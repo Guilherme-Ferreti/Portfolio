@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex items-center bg-gray-100 h-4.5 p-[var(--spacing-screen-padding)] lg:min-h-screen lg:items-start"
+    class="flex items-center bg-gray-100 h-4.5 p-(--spacing-screen-padding) lg:min-h-screen lg:items-start"
   >
     <button
       class="lg:hidden mr-1 cursor-pointer"
@@ -12,7 +12,7 @@
       v-tooltip.left="'Guilherme\'s profile'"
     >
       <img
-        class="rounded-full size-[2.25rem] object-cover object-center"
+        class="rounded-full size-2.25 object-cover object-center"
         src="@/assets/images/profile-picture.png"
         alt="Guilherme's profile picture"
       />

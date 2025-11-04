@@ -1,5 +1,5 @@
 <template>
-  <div class="px-[var(--spacing-screen-padding)] space-y-3">
+  <div class="px-(--spacing-screen-padding) space-y-3">
     <TheHero />
     <AppSection
       :id="AppSectionId.SKILLS"
@@ -12,7 +12,7 @@
       title="My Projects"
       description="Dive into a collection of projects that showcase my technical skills and problem-solving approach. These works demonstrate my hands-on experience applying technologies like Laravel and Vue.js to solve real-world challenges."
     >
-      <ProjectsGrid />
+      <ProjectList />
     </AppSection>
     <AppSection
       :id="AppSectionId.WORK_HISTORY"
@@ -32,7 +32,7 @@
 <script lang="ts" setup>
 import AppSection from '@/components/AppSection.vue';
 import EducationHistory from '@/components/EducationHistory.vue';
-import ProjectsGrid from '@/components/ProjectsGrid.vue';
+import ProjectList from '@/components/ProjectList.vue';
 import SkillsCarousel from '@/components/SkillsCarousel.vue';
 import TheHero from '@/components/TheHero.vue';
 import WorkHistory from '@/components/WorkHistory.vue';

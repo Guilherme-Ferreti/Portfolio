@@ -9,14 +9,14 @@
         v-bind="$attrs"
         :href="href"
         @click="navigate"
+        class="nav-link btn-border-reveal"
         :class="{
-          'nav-link btn-border-reveal': true,
           'nav-link--active': isActive,
           'nav-link--inactive': !isActive,
         }"
       >
         <component
-          class="size-[1.25rem]"
+          class="size-1.25"
           :is="icon"
         />
       </a>

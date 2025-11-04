@@ -50,7 +50,3 @@ watch(
   },
 );
 </script>
-
-<style scoped>
-@reference '@/assets/css/app.css';
-</style>

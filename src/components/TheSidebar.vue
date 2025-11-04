@@ -1,7 +1,7 @@
 <template>
   <div>
     <aside
-      class="flex flex-col items-center gap-0.75 bg-white w-[min(100vw,_20rem)] scrollbar-thin p-[var(--spacing-screen-padding)] h-screen fixed z-50 top-0 -left-20 transition-[left] duration-300 ease-in-out lg:sticky lg:left-0 overflow-y-auto"
+      class="flex flex-col items-center gap-0.75 bg-white w-[min(100vw,20rem)] scrollbar-thin p-(--spacing-screen-padding) h-screen fixed z-50 top-0 -left-20 transition-[left] duration-300 ease-in-out lg:sticky lg:left-0 overflow-y-auto"
       aria-label="Guilherme Ferreti's profile information"
       ref="sidebar"
       :class="{ 'left-0': layoutStore.sidebarIsOpen }"
@@ -54,7 +54,7 @@
             <span>{{ language.label }}</span>
             <span>{{ language.value }}</span>
           </div>
-          <ProgressBar :percentage="language.percentage" />
+          <AppProgressBar :percentage="language.percentage" />
         </li>
       </ul>
       <hr class="divider" />
@@ -71,7 +71,7 @@
             <span>{{ skill.label }}</span>
             <span>{{ skill.value }}%</span>
           </div>
-          <ProgressBar :percentage="skill.value" />
+          <AppProgressBar :percentage="skill.value" />
         </li>
       </ul>
       <hr class="divider" />
@@ -97,8 +97,8 @@
 
     <div
       aria-hidden="true"
+      class="fixed z-40 inset-0 bg-black opacity-50 pointer-events-auto w-screen h-screen"
       :class="{
-        'fixed z-40 inset-0 bg-black opacity-50 pointer-events-auto w-screen h-screen': true,
         block: layoutStore.sidebarIsOpen && breakpoints.smaller('lg').value,
         hidden: !layoutStore.sidebarIsOpen || breakpoints.greaterOrEqual('lg').value,
       }"
@@ -119,7 +119,7 @@ import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
 import { useFocusTrap } from '@vueuse/integrations/useFocusTrap';
 import { nextTick, useTemplateRef, watch } from 'vue';
 import AppLink from './AppLink.vue';
-import ProgressBar from './ProgressBar.vue';
+import AppProgressBar from './AppProgressBar.vue';
 
 const layoutStore = useLayoutStore();
 
