@@ -51,6 +51,14 @@ const projects: Project[] = [
     url: 'https://guilherme-ferreti.github.io/Trello-Board/',
   },
   {
+    name: 'TS Journal',
+    description: 'Write the happenings of your life in the form of a journal.',
+    image: new URL('@/assets/images/projects/ts-journal.webp', import.meta.url).href,
+    technologies: [VueIcon, TailwindIcon],
+    githubUrl: 'https://github.com/Guilherme-Ferreti/TS-Journal',
+    url: 'https://guilherme-ferreti.github.io/TS-Journal/',
+  },
+  {
     name: 'Recipes App',
     description: 'A collection of delicious and easy-to-cook recipes to satisfy your cravings.',
     image: new URL('@/assets/images/projects/recipes-app.webp', import.meta.url).href,
