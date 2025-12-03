@@ -12,6 +12,7 @@
 import CSSIcon from '@/assets/images/icons/css.svg';
 import FilamentPHPIcon from '@/assets/images/icons/filamentphp.svg';
 import HTMLIcon from '@/assets/images/icons/html.svg';
+import InertiaIcon from '@/assets/images/icons/inertiajs.svg';
 import JavascriptIcon from '@/assets/images/icons/javascript.svg';
 import LaravelIcon from '@/assets/images/icons/laravel.svg';
 import NuxtIcon from '@/assets/images/icons/nuxt.svg';
@@ -23,6 +24,15 @@ import type { Project } from '@/types';
 import ProjectListItem from './ProjectListItem.vue';
 
 const projects: Project[] = [
+  {
+    name: 'Exclusive (work in progress)',
+    description:
+      'Exclusive is a fictional online shop that sells high-quality collectibles such as Pokemon cards and comic books.',
+    image: new URL('@/assets/images/projects/exclusive.webp', import.meta.url).href,
+    technologies: [LaravelIcon, VueIcon, TailwindIcon, InertiaIcon, PHPStanIcon],
+    githubUrl: 'https://github.com/Guilherme-Ferreti/Exclusive',
+    url: 'https://exclusive-guilherme-ferreti.laravel.cloud',
+  },
   {
     name: 'Skillbridge',
     description:

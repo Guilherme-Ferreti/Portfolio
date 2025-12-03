@@ -24,6 +24,7 @@
 <script setup lang="ts">
 import DockerLogo from '@/assets/images/logos/docker.svg';
 import FilamentPHPLogo from '@/assets/images/logos/filamentphp.svg';
+import InertiaLogo from '@/assets/images/logos/inertiajs.svg';
 import LaravelLogo from '@/assets/images/logos/laravel.svg';
 import LivewireLogo from '@/assets/images/logos/livewire.svg';
 import PHPStanLogo from '@/assets/images/logos/phpstan.svg';
@@ -80,6 +81,10 @@ const skills = [
   {
     logo: TailwindLogo,
     name: 'TailwindCSS',
+  },
+  {
+    logo: InertiaLogo,
+    name: 'Inertia',
   },
   {
     logo: SASSLogo,
