@@ -6,7 +6,13 @@
       '@2xl:flex-row': !reversed,
     }"
   >
-    <div class="overflow-hidden">
+    <div
+      class="overflow-hidden"
+      :class="{
+        'rounded-r-lg': reversed,
+        'rounded-l-lg': !reversed,
+      }"
+    >
       <img
         :src="project.image"
         :alt="`${project.name} homepage screenshot`"
