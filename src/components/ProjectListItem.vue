@@ -28,8 +28,8 @@
         <span class="text-dark text-sm font-bold">Technologies:</span>
         <img
           v-for="technology in project.technologies"
-          :src="technology"
-          alt="Technology icon"
+          :src="technology.iconPath"
+          :alt="`${technology.name} icon`"
           loading="lazy"
           class="size-1.5"
         />

@@ -10,22 +10,8 @@
 
 <script setup lang="ts">
 import type { Project } from '@/types';
-import { image } from '@/utils';
+import { image, technologies } from '@/utils';
 import ProjectListItem from './ProjectListItem.vue';
-
-const CSSIcon = image('icons/css.svg');
-const FilamentPHPIcon = image('icons/filamentphp.svg');
-const FlaskIcon = image('icons/flask.svg');
-const HTMLIcon = image('icons/html.svg');
-const InertiaIcon = image('icons/inertiajs.svg');
-const JavascriptIcon = image('icons/javascript.svg');
-const LaravelIcon = image('icons/laravel.svg');
-const NuxtIcon = image('icons/nuxt.svg');
-const PHPStanIcon = image('icons/phpstan.svg');
-const PythonIcon = image('icons/python.svg');
-const SASSIcon = image('icons/sass.svg');
-const TailwindIcon = image('icons/tailwind.svg');
-const VueIcon = image('icons/vue.svg');
 
 const projects: Project[] = [
   {
@@ -33,7 +19,13 @@ const projects: Project[] = [
     description:
       'Exclusive is a fictional online shop that sells high-quality collectibles such as Pokemon cards and comic books.',
     image: image('projects/exclusive.webp'),
-    technologies: [LaravelIcon, VueIcon, TailwindIcon, InertiaIcon, PHPStanIcon],
+    technologies: [
+      technologies.laravel,
+      technologies.vue,
+      technologies.tailwind,
+      technologies.inertia,
+      technologies.phpstan,
+    ],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Exclusive',
     url: 'https://exclusive-guilherme-ferreti.laravel.cloud',
   },
@@ -42,7 +34,12 @@ const projects: Project[] = [
     description:
       'A fictional platform that helps you unlock your creative potential by offering a wide range of online design and development courses.',
     image: image('projects/skillbridge.webp'),
-    technologies: [LaravelIcon, SASSIcon, FilamentPHPIcon, PHPStanIcon],
+    technologies: [
+      technologies.laravel,
+      technologies.sass,
+      technologies.filament,
+      technologies.phpstan,
+    ],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Skillbridge',
     url: 'https://skillbridge-guilherme-ferreti.laravel.cloud',
   },
@@ -51,7 +48,7 @@ const projects: Project[] = [
     description:
       'Fast, minimal, and practical — Flaskr makes blogging straightforward and enjoyable.',
     image: image('projects/flaskr.webp'),
-    technologies: [PythonIcon, FlaskIcon],
+    technologies: [technologies.python, technologies.flask],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Flaskr',
     url: null,
   },
@@ -60,7 +57,7 @@ const projects: Project[] = [
     description:
       'Create and manage soccer tournaments quickly and easily. Choose from various competition formats, add participating teams, and enter results as you wish.',
     image: image('projects/aleague-api.webp'),
-    technologies: [LaravelIcon, PHPStanIcon],
+    technologies: [technologies.laravel, technologies.phpstan],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Aleague-API',
     url: null,
   },
@@ -69,7 +66,7 @@ const projects: Project[] = [
     description:
       'A simple and easy-to-use Trello board. Create and manage tasks, assign them to different columns, and track their progress.',
     image: image('projects/trello-board.webp'),
-    technologies: [NuxtIcon, TailwindIcon],
+    technologies: [technologies.nuxt, technologies.tailwind],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Trello-Board',
     url: 'https://guilherme-ferreti.github.io/Trello-Board/',
   },
@@ -77,7 +74,7 @@ const projects: Project[] = [
     name: 'TS Journal',
     description: 'Write the happenings of your life in the form of a journal.',
     image: image('projects/ts-journal.webp'),
-    technologies: [VueIcon, TailwindIcon],
+    technologies: [technologies.vue, technologies.tailwind],
     githubUrl: 'https://github.com/Guilherme-Ferreti/TS-Journal',
     url: 'https://guilherme-ferreti.github.io/TS-Journal/',
   },
@@ -85,7 +82,7 @@ const projects: Project[] = [
     name: 'Recipes App',
     description: 'A collection of delicious and easy-to-cook recipes to satisfy your cravings.',
     image: image('projects/recipes-app.webp'),
-    technologies: [VueIcon, SASSIcon],
+    technologies: [technologies.vue, technologies.sass],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Recipes-App',
     url: 'https://guilherme-ferreti.github.io/Recipes-App',
   },
@@ -94,7 +91,7 @@ const projects: Project[] = [
     description:
       'A collection of HTML pages to practice and improve my skills in HTML, CSS, and JavaScript.',
     image: image('projects/diverse-html-pages.webp'),
-    technologies: [HTMLIcon, CSSIcon, JavascriptIcon],
+    technologies: [technologies.html, technologies.css, technologies.javascript],
     githubUrl: 'https://github.com/Guilherme-Ferreti/html',
     url: 'https://guilherme-ferreti.github.io/html',
   },
