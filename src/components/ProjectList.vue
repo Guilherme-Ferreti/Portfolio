@@ -11,12 +11,14 @@
 <script setup lang="ts">
 import CSSIcon from '@/assets/images/icons/css.svg';
 import FilamentPHPIcon from '@/assets/images/icons/filamentphp.svg';
+import FlaskIcon from '@/assets/images/icons/flask.svg';
 import HTMLIcon from '@/assets/images/icons/html.svg';
 import InertiaIcon from '@/assets/images/icons/inertiajs.svg';
 import JavascriptIcon from '@/assets/images/icons/javascript.svg';
 import LaravelIcon from '@/assets/images/icons/laravel.svg';
 import NuxtIcon from '@/assets/images/icons/nuxt.svg';
 import PHPStanIcon from '@/assets/images/icons/phpstan.svg';
+import PythonIcon from '@/assets/images/icons/python.svg';
 import SASSIcon from '@/assets/images/icons/sass.svg';
 import TailwindIcon from '@/assets/images/icons/tailwind.svg';
 import VueIcon from '@/assets/images/icons/vue.svg';
@@ -41,6 +43,15 @@ const projects: Project[] = [
     technologies: [LaravelIcon, SASSIcon, FilamentPHPIcon, PHPStanIcon],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Skillbridge',
     url: 'https://skillbridge-guilherme-ferreti.laravel.cloud',
+  },
+  {
+    name: 'Flaskr',
+    description:
+      'Fast, minimal, and practical — Flaskr makes blogging straightforward and enjoyable.',
+    image: new URL('@/assets/images/projects/flaskr.webp', import.meta.url).href,
+    technologies: [PythonIcon, FlaskIcon],
+    githubUrl: 'https://github.com/Guilherme-Ferreti/Flaskr',
+    url: null,
   },
   {
     name: 'Aleague API',
