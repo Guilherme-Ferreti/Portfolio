@@ -17,7 +17,7 @@
       </button>
       <img
         class="rounded-full size-8 object-cover object-center mb-0.75"
-        src="@/assets/images/profile-picture.png"
+        :src="image('profile-picture.png')"
         alt="Guilherme's profile picture"
       />
       <span class="text-dark text-xl text-trim text-center">Guilherme Ferreti</span>
@@ -109,6 +109,7 @@
 
 <script setup lang="ts">
 import { useLayoutStore } from '@/stores/layout';
+import { image } from '@/utils';
 import {
   IconBrandGithubFilled,
   IconBrandLinkedinFilled,

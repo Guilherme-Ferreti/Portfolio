@@ -26,9 +26,11 @@
       <p>{{ project.description }}</p>
       <div class="flex gap-0.75 items-center">
         <span class="text-dark text-sm font-bold">Technologies:</span>
-        <component
+        <img
           v-for="technology in project.technologies"
-          :is="technology"
+          :src="technology"
+          alt="Technology icon"
+          loading="lazy"
           class="size-1.5"
         />
       </div>

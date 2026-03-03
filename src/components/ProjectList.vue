@@ -9,28 +9,30 @@
 </template>
 
 <script setup lang="ts">
-import CSSIcon from '@/assets/images/icons/css.svg';
-import FilamentPHPIcon from '@/assets/images/icons/filamentphp.svg';
-import FlaskIcon from '@/assets/images/icons/flask.svg';
-import HTMLIcon from '@/assets/images/icons/html.svg';
-import InertiaIcon from '@/assets/images/icons/inertiajs.svg';
-import JavascriptIcon from '@/assets/images/icons/javascript.svg';
-import LaravelIcon from '@/assets/images/icons/laravel.svg';
-import NuxtIcon from '@/assets/images/icons/nuxt.svg';
-import PHPStanIcon from '@/assets/images/icons/phpstan.svg';
-import PythonIcon from '@/assets/images/icons/python.svg';
-import SASSIcon from '@/assets/images/icons/sass.svg';
-import TailwindIcon from '@/assets/images/icons/tailwind.svg';
-import VueIcon from '@/assets/images/icons/vue.svg';
 import type { Project } from '@/types';
+import { image } from '@/utils';
 import ProjectListItem from './ProjectListItem.vue';
+
+const CSSIcon = image('icons/css.svg');
+const FilamentPHPIcon = image('icons/filamentphp.svg');
+const FlaskIcon = image('icons/flask.svg');
+const HTMLIcon = image('icons/html.svg');
+const InertiaIcon = image('icons/inertiajs.svg');
+const JavascriptIcon = image('icons/javascript.svg');
+const LaravelIcon = image('icons/laravel.svg');
+const NuxtIcon = image('icons/nuxt.svg');
+const PHPStanIcon = image('icons/phpstan.svg');
+const PythonIcon = image('icons/python.svg');
+const SASSIcon = image('icons/sass.svg');
+const TailwindIcon = image('icons/tailwind.svg');
+const VueIcon = image('icons/vue.svg');
 
 const projects: Project[] = [
   {
     name: 'Exclusive (work in progress)',
     description:
       'Exclusive is a fictional online shop that sells high-quality collectibles such as Pokemon cards and comic books.',
-    image: new URL('@/assets/images/projects/exclusive.webp', import.meta.url).href,
+    image: image('projects/exclusive.webp'),
     technologies: [LaravelIcon, VueIcon, TailwindIcon, InertiaIcon, PHPStanIcon],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Exclusive',
     url: 'https://exclusive-guilherme-ferreti.laravel.cloud',
@@ -39,7 +41,7 @@ const projects: Project[] = [
     name: 'Skillbridge',
     description:
       'A fictional platform that helps you unlock your creative potential by offering a wide range of online design and development courses.',
-    image: new URL('@/assets/images/projects/skillbridge.webp', import.meta.url).href,
+    image: image('projects/skillbridge.webp'),
     technologies: [LaravelIcon, SASSIcon, FilamentPHPIcon, PHPStanIcon],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Skillbridge',
     url: 'https://skillbridge-guilherme-ferreti.laravel.cloud',
@@ -48,7 +50,7 @@ const projects: Project[] = [
     name: 'Flaskr',
     description:
       'Fast, minimal, and practical — Flaskr makes blogging straightforward and enjoyable.',
-    image: new URL('@/assets/images/projects/flaskr.webp', import.meta.url).href,
+    image: image('projects/flaskr.webp'),
     technologies: [PythonIcon, FlaskIcon],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Flaskr',
     url: null,
@@ -57,7 +59,7 @@ const projects: Project[] = [
     name: 'Aleague API',
     description:
       'Create and manage soccer tournaments quickly and easily. Choose from various competition formats, add participating teams, and enter results as you wish.',
-    image: new URL('@/assets/images/projects/aleague-api.webp', import.meta.url).href,
+    image: image('projects/aleague-api.webp'),
     technologies: [LaravelIcon, PHPStanIcon],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Aleague-API',
     url: null,
@@ -66,7 +68,7 @@ const projects: Project[] = [
     name: 'Trello Board',
     description:
       'A simple and easy-to-use Trello board. Create and manage tasks, assign them to different columns, and track their progress.',
-    image: new URL('@/assets/images/projects/trello-board.webp', import.meta.url).href,
+    image: image('projects/trello-board.webp'),
     technologies: [NuxtIcon, TailwindIcon],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Trello-Board',
     url: 'https://guilherme-ferreti.github.io/Trello-Board/',
@@ -74,7 +76,7 @@ const projects: Project[] = [
   {
     name: 'TS Journal',
     description: 'Write the happenings of your life in the form of a journal.',
-    image: new URL('@/assets/images/projects/ts-journal.webp', import.meta.url).href,
+    image: image('projects/ts-journal.webp'),
     technologies: [VueIcon, TailwindIcon],
     githubUrl: 'https://github.com/Guilherme-Ferreti/TS-Journal',
     url: 'https://guilherme-ferreti.github.io/TS-Journal/',
@@ -82,7 +84,7 @@ const projects: Project[] = [
   {
     name: 'Recipes App',
     description: 'A collection of delicious and easy-to-cook recipes to satisfy your cravings.',
-    image: new URL('@/assets/images/projects/recipes-app.webp', import.meta.url).href,
+    image: image('projects/recipes-app.webp'),
     technologies: [VueIcon, SASSIcon],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Recipes-App',
     url: 'https://guilherme-ferreti.github.io/Recipes-App',
@@ -91,7 +93,7 @@ const projects: Project[] = [
     name: 'Diverse HTML Pages',
     description:
       'A collection of HTML pages to practice and improve my skills in HTML, CSS, and JavaScript.',
-    image: new URL('@/assets/images/projects/diverse-html-pages.webp', import.meta.url).href,
+    image: image('projects/diverse-html-pages.webp'),
     technologies: [HTMLIcon, CSSIcon, JavascriptIcon],
     githubUrl: 'https://github.com/Guilherme-Ferreti/html',
     url: 'https://guilherme-ferreti.github.io/html',

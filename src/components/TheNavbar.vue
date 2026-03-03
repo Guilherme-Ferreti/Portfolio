@@ -13,7 +13,7 @@
     >
       <img
         class="rounded-full size-2.25 object-cover object-center"
-        src="@/assets/images/profile-picture.png"
+        :src="image('profile-picture.png')"
         alt="Guilherme's profile picture"
       />
     </button>
@@ -60,6 +60,7 @@
 <script setup lang="ts">
 import { AppSectionId } from '@/enums/AppSectionId';
 import { useLayoutStore } from '@/stores/layout';
+import { image } from '@/utils';
 import {
   IconBookFilled,
   IconBriefcaseFilled,

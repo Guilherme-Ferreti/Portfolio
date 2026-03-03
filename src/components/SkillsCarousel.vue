@@ -10,8 +10,8 @@
         class="border-r border-gray-600"
       >
         <div class="flex justify-center items-center p-2 h-full">
-          <component
-            :is="skill.logo"
+          <img
+            :src="skill.logo"
             :aria-label="skill.name"
             class="max-w-10 max-h-3"
           />
@@ -22,17 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import DockerLogo from '@/assets/images/logos/docker.svg';
-import FilamentPHPLogo from '@/assets/images/logos/filamentphp.svg';
-import InertiaLogo from '@/assets/images/logos/inertiajs.svg';
-import LaravelLogo from '@/assets/images/logos/laravel.svg';
-import LivewireLogo from '@/assets/images/logos/livewire.svg';
-import PHPStanLogo from '@/assets/images/logos/phpstan.svg';
-import PHPUnitLogo from '@/assets/images/logos/phpunit.svg';
-import SASSLogo from '@/assets/images/logos/sass.svg';
-import SQLLogo from '@/assets/images/logos/sql.svg';
-import TailwindLogo from '@/assets/images/logos/tailwindcss.svg';
-import VueLogo from '@/assets/images/logos/vuejs.svg';
+import { image } from '@/utils';
 import type { SwiperContainer } from 'swiper/element';
 import { onMounted } from 'vue';
 
@@ -71,47 +61,47 @@ onMounted(() => {
 
 const skills = [
   {
-    logo: LaravelLogo,
+    logo: image('logos/laravel.svg'),
     name: 'Laravel',
   },
   {
-    logo: VueLogo,
+    logo: image('logos/vuejs.svg'),
     name: 'Vue.js',
   },
   {
-    logo: TailwindLogo,
+    logo: image('logos/tailwindcss.svg'),
     name: 'TailwindCSS',
   },
   {
-    logo: InertiaLogo,
+    logo: image('logos/inertiajs.svg'),
     name: 'Inertia',
   },
   {
-    logo: SASSLogo,
+    logo: image('logos/sass.svg'),
     name: 'SASS',
   },
   {
-    logo: LivewireLogo,
+    logo: image('logos/livewire.svg'),
     name: 'Livewire',
   },
   {
-    logo: PHPStanLogo,
+    logo: image('logos/phpstan.svg'),
     name: 'PHPStan',
   },
   {
-    logo: PHPUnitLogo,
+    logo: image('logos/phpunit.svg'),
     name: 'PHPUnit',
   },
   {
-    logo: DockerLogo,
+    logo: image('logos/docker.svg'),
     name: 'Docker',
   },
   {
-    logo: FilamentPHPLogo,
+    logo: image('logos/filamentphp.svg'),
     name: 'FilamentPHP',
   },
   {
-    logo: SQLLogo,
+    logo: image('logos/sql.svg'),
     name: 'SQL',
   },
 ];
