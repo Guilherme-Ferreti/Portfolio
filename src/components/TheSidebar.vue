@@ -17,7 +17,7 @@
       </button>
       <img
         class="rounded-full size-8 object-cover object-center mb-0.75"
-        :src="image('profile-picture.png')"
+        :src="image('profile-picture.webp')"
         alt="Guilherme's profile picture"
       />
       <span class="text-dark text-xl text-trim text-center">Guilherme Ferreti</span>

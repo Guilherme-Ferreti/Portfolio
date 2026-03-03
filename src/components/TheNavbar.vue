@@ -13,7 +13,7 @@
     >
       <img
         class="rounded-full size-2.25 object-cover object-center"
-        :src="image('profile-picture.png')"
+        :src="image('profile-picture.webp')"
         alt="Guilherme's profile picture"
       />
     </button>
