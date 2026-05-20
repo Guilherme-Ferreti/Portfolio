@@ -15,15 +15,15 @@ import ProjectListItem from './ProjectListItem.vue';
 
 const projects: Project[] = [
   {
-    name: 'Exclusive (work in progress)',
-    description:
-      'Exclusive is a fictional online shop that sells high-quality collectibles such as Pokemon cards and comic books.',
+    name: 'Exclusive',
+    description: 'Exclusive is a fictional online shop that sells high-quality Pokemon cards.',
     image: image('projects/exclusive.webp'),
     technologies: [
       technologies.laravel,
       technologies.vue,
       technologies.tailwind,
       technologies.inertia,
+      technologies.typescript,
       technologies.phpstan,
     ],
     githubUrl: 'https://github.com/Guilherme-Ferreti/Exclusive',
@@ -74,7 +74,7 @@ const projects: Project[] = [
     name: 'TS Journal',
     description: 'Write the happenings of your life in the form of a journal.',
     image: image('projects/ts-journal.webp'),
-    technologies: [technologies.vue, technologies.tailwind],
+    technologies: [technologies.vue, technologies.tailwind, technologies.typescript],
     githubUrl: 'https://github.com/Guilherme-Ferreti/TS-Journal',
     url: 'https://guilherme-ferreti.github.io/TS-Journal/',
   },

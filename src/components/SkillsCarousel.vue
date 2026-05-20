@@ -77,6 +77,10 @@ const skills = [
     name: 'Inertia',
   },
   {
+    logo: image('logos/typescript.svg'),
+    name: 'TypeScript',
+  },
+  {
     logo: image('logos/sass.svg'),
     name: 'SASS',
   },

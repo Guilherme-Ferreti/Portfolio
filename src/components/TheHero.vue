@@ -4,7 +4,7 @@
     class="bg-white p-2 lg:p-4 @container"
     aria-labelledby="hero__heading"
   >
-    <div class="@xl:w-[60%]">
+    <div class="@xl:w-[70%]">
       <h1
         class="text-dark text-4xl/2.75 font-bold mb-1 flex flex-col"
         id="hero__heading"
@@ -14,7 +14,8 @@
       </h1>
       <p>
         Web developer with over 6 years of experience specializing in PHP, with a strong focus on
-        Laravel and Vue.js for building dynamic, scalable, and high-performance applications.
+        Laravel and Vue.js, leveraging AI-Augmented Development for building dynamic, scalable,
+        accessible (a11y), and high-performance applications.
       </p>
     </div>
   </AppSection>

@@ -51,6 +51,10 @@ export const technologies = {
     name: 'Tailwind',
     iconPath: image('icons/tailwind.svg'),
   },
+  typescript: {
+    name: 'Typescript',
+    iconPath: image('icons/typescript.svg'),
+  },
   vue: {
     name: 'Vue',
     iconPath: image('icons/vue.svg'),

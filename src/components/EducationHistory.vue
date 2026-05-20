@@ -20,27 +20,27 @@
 <script setup lang="ts">
 const educationHistory = [
   {
-    title: 'Systems Analysis and Development Technician',
-    institution: 'ETEC Lauro Gomes',
-    endDate: '2019',
+    title: 'Leveraging AI for Laravel Development',
+    institution: 'Laracasts',
+    endDate: '2025',
   },
   {
-    title: 'Hcode Lab Web Starter HTML & CSS',
-    institution: 'Hcode Trainings',
-    endDate: '2020',
+    title: 'Eloquent Performance Patterns',
+    institution: 'Laracasts',
+    endDate: '2023',
   },
   {
-    title: 'Hcode Lab JavaScript Developer',
-    institution: 'Hcode Trainings',
-    endDate: '2021',
+    title: 'Inertia and SPA Techniques',
+    institution: 'Laracasts',
+    endDate: '2022',
   },
   {
-    title: 'PHP 8 - The Language',
-    institution: 'Hcode Trainings',
-    endDate: '2021',
+    title: 'Laravel From Scratch',
+    institution: 'Laracasts',
+    endDate: '2022',
   },
   {
-    title: 'Hcode Lab Database Developer',
+    title: 'Hcode Lab Back-end Developer',
     institution: 'Hcode Trainings',
     endDate: '2021',
   },
@@ -50,14 +50,34 @@ const educationHistory = [
     endDate: '2021',
   },
   {
+    title: 'Hcode Lab JavaScript Developer',
+    institution: 'Hcode Trainings',
+    endDate: '2021',
+  },
+  {
+    title: 'Hcode Lab Database Developer',
+    institution: 'Hcode Trainings',
+    endDate: '2021',
+  },
+  {
     title: 'Hcode Lab Mobile Developer',
     institution: 'Hcode Trainings',
     endDate: '2021',
   },
   {
-    title: 'Hcode Lab Back-end Developer',
+    title: 'PHP 8 - The Language',
     institution: 'Hcode Trainings',
     endDate: '2021',
+  },
+  {
+    title: 'Hcode Lab Web Starter HTML & CSS',
+    institution: 'Hcode Trainings',
+    endDate: '2020',
+  },
+  {
+    title: 'Systems Analysis and Development Technician',
+    institution: 'ETEC Lauro Gomes',
+    endDate: '2019',
   },
 ];
 </script>

@@ -191,14 +191,23 @@ const profile = {
     },
     {
       label: 'Vue.js',
-      value: 80,
+      value: 100,
     },
     {
       label: 'Tailwind CSS',
-      value: 80,
+      value: 100,
+    },
+    {
+      label: 'AI Workflows',
+      value: 100,
+    },
+    {
+      label: 'Typescript',
+      value: 100,
     },
   ],
   extraSkills: [
+    'AI-driven development',
     'Restful APIs',
     'Unit Testing, Static Analysis',
     'Git Knowledge',
