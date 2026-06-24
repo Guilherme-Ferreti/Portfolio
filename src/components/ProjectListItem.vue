@@ -24,7 +24,7 @@
     <div class="p-1.5 gap-1.25 flex flex-col">
       <h3 class="text-dark text-xl font-bold text-center">{{ project.name }}</h3>
       <p>{{ project.description }}</p>
-      <div class="flex gap-0.75 items-center">
+      <div class="flex flex-wrap gap-0.75 items-center">
         <span class="text-dark text-sm font-bold">Technologies:</span>
         <img
           v-for="technology in project.technologies"
