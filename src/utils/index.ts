@@ -31,6 +31,14 @@ export const technologies = {
     name: 'Laravel',
     iconPath: image('icons/laravel.svg'),
   },
+  livewire: {
+    name: 'Livewire',
+    iconPath: image('icons/livewire.svg'),
+  },
+  nativephp: {
+    name: 'Nativephp',
+    iconPath: image('icons/nativephp.svg'),
+  },
   nuxt: {
     name: 'Nuxt',
     iconPath: image('icons/nuxt.svg'),

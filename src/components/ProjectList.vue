@@ -15,6 +15,20 @@ import ProjectListItem from './ProjectListItem.vue';
 
 const projects: Project[] = [
   {
+    name: 'Habit Tracker App',
+    description: 'An app that helps you track and manage your daily habits.',
+    image: image('projects/habit-tracker-app.webp'),
+    technologies: [
+      technologies.laravel,
+      technologies.livewire,
+      technologies.nativephp,
+      technologies.tailwind,
+      technologies.phpstan,
+    ],
+    githubUrl: 'https://github.com/Guilherme-Ferreti/Habit-Tracker-App',
+    url: 'https://habit-tracker-app-guilherme-ferreti.laravel.cloud',
+  },
+  {
     name: 'Exclusive',
     description: 'Exclusive is a fictional online shop that sells high-quality Pokemon cards.',
     image: image('projects/exclusive.webp'),
