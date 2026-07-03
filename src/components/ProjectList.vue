@@ -15,6 +15,19 @@ import ProjectListItem from './ProjectListItem.vue';
 
 const projects: Project[] = [
   {
+    name: 'BloomBase',
+    description: 'BloomBase is an educational website designed to make information about common flowers easy to access for everyone.',
+    image: image('projects/bloombase.webp'),
+    technologies: [
+      technologies.laravel,
+      technologies.livewire,
+      technologies.tailwind,
+      technologies.phpstan,
+    ],
+    githubUrl: 'https://github.com/Guilherme-Ferreti/BloomBase',
+    url: 'https://bloombase-guilherme-ferreti.laravel.cloud',
+  },
+  {
     name: 'Habit Tracker App',
     description: 'An app that helps you track and manage your daily habits.',
     image: image('projects/habit-tracker-app.webp'),
