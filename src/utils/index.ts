@@ -67,4 +67,8 @@ export const technologies = {
     name: 'Vue',
     iconPath: image('icons/vue.svg'),
   },
+  claudeCode: {
+    name: 'Claude Code',
+    iconPath: image('icons/claude-code.svg'),
+  },
 };

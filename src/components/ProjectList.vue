@@ -15,8 +15,26 @@ import ProjectListItem from './ProjectListItem.vue';
 
 const projects: Project[] = [
   {
+    name: 'Pokémon Deluxe',
+    description:
+      'A browser Pokémon adventure where every Pokémon can be the strongest. Explore, battle and catch them all! Work in progress.',
+    image: image('projects/pokemon-deluxe.webp'),
+    technologies: [
+      technologies.laravel,
+      technologies.vue,
+      technologies.inertia,
+      technologies.tailwind,
+      technologies.typescript,
+      technologies.phpstan,
+      technologies.claudeCode,
+    ],
+    githubUrl: 'https://github.com/Guilherme-Ferreti/Pokemon-Deluxe',
+    url: 'https://pokemon-deluxe.laravel.cloud',
+  },
+  {
     name: 'BloomBase',
-    description: 'BloomBase is an educational website designed to make information about common flowers easy to access for everyone.',
+    description:
+      'BloomBase is an educational website designed to make information about common flowers easy to access for everyone.',
     image: image('projects/bloombase.webp'),
     technologies: [
       technologies.laravel,
@@ -43,7 +61,7 @@ const projects: Project[] = [
   },
   {
     name: 'Exclusive',
-    description: 'Exclusive is a fictional online shop that sells high-quality Pokemon cards.',
+    description: 'Exclusive is a fictional online shop that sells high-quality Pokémon cards.',
     image: image('projects/exclusive.webp'),
     technologies: [
       technologies.laravel,
