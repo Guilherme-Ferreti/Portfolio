@@ -32,6 +32,7 @@
           :alt="`${technology.name} icon`"
           loading="lazy"
           class="size-1.5"
+          v-tooltip.top="technology.name"
         />
       </div>
       <div
