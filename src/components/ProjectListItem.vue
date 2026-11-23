@@ -13,13 +13,19 @@
         'rounded-l-lg': !reversed,
       }"
     >
-      <img
-        :src="project.image"
-        :alt="`${project.name} homepage screenshot`"
-        class="h-full object-cover bg-no-repeat hover:scale-105 transition-transform duration-300 ease-in-out"
-        role="presentation"
-        loading="lazy"
-      />
+      <Viewer
+        :toolbar="false"
+        :navbar="false"
+        :title="false"
+      >
+        <img
+          :src="project.image"
+          :alt="`${project.name} homepage screenshot`"
+          class="h-full object-cover bg-no-repeat hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+          role="presentation"
+          loading="lazy"
+        />
+      </Viewer>
     </div>
     <div class="p-1.5 gap-1.25 flex flex-col">
       <h3 class="text-dark text-xl font-bold text-center">{{ project.name }}</h3>
@@ -61,6 +67,7 @@
 <script setup lang="ts">
 import type { Project } from '@/types';
 import { IconBrandGithubFilled, IconExternalLink } from '@tabler/icons-vue';
+import { Viewer } from 'v-viewer';
 import AppLink from './AppLink.vue';
 
 defineProps<{
