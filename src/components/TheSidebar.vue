@@ -220,7 +220,7 @@ const profile = {
   ],
 };
 
-const squareIconUrl = import.meta.env.VITE_BASE_URL + 'icons/squares.svg';
+const squareIconUrl = import.meta.env.VITE_BASE_URL + 'images/icons/squares.svg';
 </script>
 
 <style scoped>
